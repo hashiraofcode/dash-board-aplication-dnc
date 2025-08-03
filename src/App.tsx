@@ -1,8 +1,15 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+
 function App() {
   return (
-    <>
-      <h1>Hello World</h1>
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<>Login</>} />
+        <Route path="/home" element={<>home</>} />
+        <Route path="/leads" element={<>leads</>} />
+        <Route path="/perfil" element={<>perfil</>} />
+      </Routes>
+    </Router>
   )
 }
 
