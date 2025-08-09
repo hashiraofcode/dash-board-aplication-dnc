@@ -4,7 +4,7 @@ export const lightTheme: Theme = {
   appBackground: '#FFF',
   appColor: '#000',
   appDefaultStroke: '#E0E0E0',
-  appLogo: 'dnc-logo.svg',
+  appLogo: 'logo-black.svg',
   appSkeletonFrom: '#EEE',
   appSkeletonTo: '#CCC',
   buttons: {
