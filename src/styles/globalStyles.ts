@@ -6,7 +6,7 @@ export const GlobalStyle = createGlobalStyle<{ theme?: Theme }>`
     margin: 0;
     padding: 0;
     border: none;
-    list-style: none;
+    /* list-style: none; */
     box-sizing: border-box;
 }
 html {
@@ -17,6 +17,7 @@ body {
     min-height: 100dvh;
     font-family: "Inter", sans-serif;
     font-size: 1rem;
+    color: ${(props) => props.theme.appColor};
     background-color: ${(props) => props.theme.appBackground}
 }
 `

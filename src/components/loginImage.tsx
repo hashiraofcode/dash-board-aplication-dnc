@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const LoginImage = styled.div`
-  background-image: url(/background-login-area.svg);
+  background-image: url('/background-login-area.svg');
   min-height: 100%;
   background-size: cover;
   max-width: 100%;

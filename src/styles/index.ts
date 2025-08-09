@@ -1,2 +1,5 @@
+export { default as StyledButton } from './styledButton.ts'
+export { default as StyledInput } from './styledInput.ts'
 export * from './globalStyles.ts'
 export * from './theme.ts'
+export * from './typographiStyles.ts'
