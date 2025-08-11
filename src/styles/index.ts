@@ -1,3 +1,4 @@
+export { default as CardComponent } from './cardComponent.ts'
 export { default as StyledButton } from './styledButton.ts'
 export { default as StyledInput } from './styledInput.ts'
 export * from './globalStyles.ts'
