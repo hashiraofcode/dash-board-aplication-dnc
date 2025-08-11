@@ -1,4 +1,4 @@
-export default interface StyledComponent {
+export interface StyledComponent {
   color?: string
   lineHeigth?: string
   fontSize?: string

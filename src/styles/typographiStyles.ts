@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { type Theme, type StyledComponent } from '@/types'
+import { type Theme, type StyledComponent } from '@/types/index.ts'
 
 export const TitleH1 = styled.h1<{
   theme?: Theme
