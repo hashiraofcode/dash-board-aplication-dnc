@@ -1,10 +1,10 @@
-import { Header, AvatarComponent } from '@/components/index.ts'
+import { Header, AvatarComponent, CustomTable } from '@/components/index.ts'
 import { CardComponent } from '@/styles'
 import { Container } from '@mui/material'
-import { type ListDataProps } from '@/types'
+import { type ListDataProps, type CustomTableProps } from '@/types'
 import { currencyConverter } from '@/utils/index.ts'
 function Home() {
-  const ExempleArray: ListDataProps[] = [
+  const ExempleEmployeeData: ListDataProps[] = [
     {
       avatar: '/logo-pixel.svg',
       name: 'João da Silva',
@@ -26,14 +26,53 @@ function Home() {
       subtitle: `${currencyConverter(11345.56)}`,
     },
   ]
+  const ExempleLeadsData: CustomTableProps = {
+    header: ['Nome', 'E-mail', 'Action'],
+    rows: [
+      [
+        <span>João da Silva</span>,
+        <span>joãozinho2@gmail.com</span>,
+        <button>Action</button>,
+      ],
+      [
+        <span>João da Silva</span>,
+        <span>joãozinho2@gmail.com</span>,
+        <button>Action</button>,
+      ],
+      [
+        <span>João da Silva</span>,
+        <span>joãozinho2@gmail.com</span>,
+        <button>Action</button>,
+      ],
+      [
+        <span>João da Silva</span>,
+        <span>joãozinho2@gmail.com</span>,
+        <button>Action</button>,
+      ],
+      [
+        <span>João da Silva</span>,
+        <span>joãozinho2@gmail.com</span>,
+        <button>Action</button>,
+      ],
+      [
+        <span>João da Silva</span>,
+        <span>joãozinho2@gmail.com</span>,
+        <button>Action</button>,
+      ],
+    ],
+  }
   return (
     <>
       <Header />
-      <h1>Home</h1>
       <Container maxWidth="lg">
-        <CardComponent className="">card</CardComponent>
+        <CardComponent className="">
+          <CustomTable
+            header={ExempleLeadsData.header}
+            rows={ExempleLeadsData.rows}
+          />
+        </CardComponent>
         <CardComponent>
-          <AvatarComponent people={ExempleArray} />
+          <AvatarComponent people={ExempleEmployeeData} />
         </CardComponent>
       </Container>
     </>
