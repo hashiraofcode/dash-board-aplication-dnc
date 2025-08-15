@@ -1,4 +1,9 @@
-import { Header, AvatarComponent, CustomTable } from '@/components/index.ts'
+import {
+  Header,
+  AvatarComponent,
+  CustomTable,
+  CustomChart,
+} from '@/components/index.ts'
 import { CardComponent } from '@/styles'
 import { Container } from '@mui/material'
 import { type ListDataProps, type CustomTableProps } from '@/types'
@@ -61,6 +66,8 @@ function Home() {
       ],
     ],
   }
+  const data = [12, 19, 8, 15, 22, 10]
+  const labels = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho']
   return (
     <>
       <Header />
@@ -73,6 +80,9 @@ function Home() {
         </CardComponent>
         <CardComponent>
           <AvatarComponent people={ExempleEmployeeData} />
+        </CardComponent>
+        <CardComponent>
+          <CustomChart labels={labels} data={data} type="bar" />
         </CardComponent>
       </Container>
     </>

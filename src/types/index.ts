@@ -1,5 +1,6 @@
 export type * from './avatarList.d.ts'
 export type * from './formTypes.d.ts'
 export type * from './theme.ts'
-export type * from './tipographieProps.d.ts'
+export type * from './typographieProps'
 export type * from './customTable.d.ts'
+export type * from './customChart.d.ts'
