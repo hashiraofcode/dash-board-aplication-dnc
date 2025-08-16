@@ -18,24 +18,24 @@ const StyledButton = styled.button<ButtonAtt & { theme?: Theme }>`
     &:hover {
       background-color: ${(props) => props.theme.buttons.primaryHover};
     }
+  }
 
-    &.alert {
-      background-color: ${(props) => props.theme.buttons.alert};
-      color: ${(props) => props.theme.buttons.primaryColor};
-      &:hover {
-        background-color: ${(props) => props.theme.buttons.alertHover};
-      }
+  &.alert {
+    background-color: ${(props) => props.theme.buttons.alert};
+    color: ${(props) => props.theme.buttons.primaryColor};
+    &:hover {
+      background-color: ${(props) => props.theme.buttons.alertHover};
     }
+  }
 
-    &.bordeless-alert {
-      background-color: none;
-      color: ${(props) => props.theme.buttons.alert};
-      height: 0;
-      padding: 0;
+  &.bordeless-alert {
+    background-color: none;
+    color: ${(props) => props.theme.buttons.alert};
+    height: 0;
+    padding: 0;
 
-      &:hover {
-        color: ${(props) => props.theme.buttons.alertHover};
-      }
+    &:hover {
+      color: ${(props) => props.theme.buttons.alertHover};
     }
   }
 
