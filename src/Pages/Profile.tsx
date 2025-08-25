@@ -1,16 +1,29 @@
+//  COMPONENTS AND STYLES
 import { Header } from '@/components'
 import { CardComponent, StyledButton, TitleH2 } from '@/styles'
 import { useContext } from 'react'
 import { Box, Container, Grid } from '@mui/material'
 import { ThemeAppContext } from '@/contexts'
+
+// SERVICES
+import { logoutAction } from '@/services'
+
 function Profile() {
   const appThemeConsumer = useContext(ThemeAppContext)
   return (
     <>
       <Header />
       <Container maxWidth={'lg'}>
-        <Grid container sx={{ width: '100%' }}>
-          <Grid size={5}>
+        <Grid container sx={{ width: '100%' }} spacing={4}>
+          <Grid size={{ xs: 12, sm: 6 }}>
+            <CardComponent>
+              <Box sx={{ minWidth: '100%' }}>
+                <TitleH2>Work in progress...</TitleH2>
+              </Box>
+            </CardComponent>
+          </Grid>
+          {/*logout and toggle theme */}
+          <Grid size={{ xs: 12, sm: 6 }}>
             <CardComponent>
               <Box
                 sx={{
@@ -21,7 +34,14 @@ function Profile() {
                 }}
               >
                 <TitleH2>Definições de conta</TitleH2>
-                <StyledButton className="alert">Fazer logout</StyledButton>
+                <StyledButton
+                  className="alert"
+                  onClick={() => {
+                    logoutAction()
+                  }}
+                >
+                  Fazer logout
+                </StyledButton>
                 <StyledButton
                   className="primary"
                   onClick={() => {
