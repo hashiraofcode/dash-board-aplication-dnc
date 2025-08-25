@@ -20,7 +20,7 @@ function Profile() {
                   gap: '1.6rem',
                 }}
               >
-                <TitleH2 typographieProps={{}}>Definições de conta</TitleH2>
+                <TitleH2>Definições de conta</TitleH2>
                 <StyledButton className="alert">Fazer logout</StyledButton>
                 <StyledButton
                   className="primary"

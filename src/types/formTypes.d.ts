@@ -1,4 +1,3 @@
-import type { type } from 'os'
 import type { HtmlHTMLAttributes } from 'react'
 
 export type InputAtt = React.InputHTMLAttributes<HtmlHTMLAttributes>
