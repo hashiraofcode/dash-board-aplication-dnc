@@ -36,10 +36,8 @@ function Registration() {
                 padding: '0 2.4rem',
               }}
             >
-              <TitleH1 typographieProps={{}}>Faça seu cadastro</TitleH1>
-              <StyledP typographieProps={{}}>
-                Primeiro, diga-nos quem você é.
-              </StyledP>
+              <TitleH1>Faça seu cadastro</TitleH1>
+              <StyledP>Primeiro, diga-nos quem você é.</StyledP>
             </Box>
             <Box
               sx={{
@@ -50,10 +48,8 @@ function Registration() {
                 marginBottom: '2rem',
               }}
             >
-              <StyledP typographieProps={{}}>
-                Sua senha deve ter:Sua senha deve ter:
-              </StyledP>
-              <StyledUl typographieProps={{}}>
+              <StyledP>Sua senha deve ter:Sua senha deve ter:</StyledP>
+              <StyledUl>
                 <li>Entre 8 e 16 caracteres;</li>
                 <li>Pelo menos uma letra maiúscula;</li>
                 <li>Pelo menos um caractere especial.</li>

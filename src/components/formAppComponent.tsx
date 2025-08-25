@@ -1,8 +1,9 @@
-import type { FormProps } from '@/types/index.ts'
+import type { FormProps, mensage } from '@/types/index.ts'
 import { StyledButton, StyledInput } from '@/styles/index.ts'
 import { type Theme } from '@/types/index.ts'
 import type React from 'react'
 import styled from 'styled-components'
+import { useEffect, useState, type ReactNode } from 'react'
 
 const FormComponent = styled.form`
   display: flex;
@@ -15,6 +16,31 @@ const MensageComponent = styled.p<{ children: string }>`
 
 export const FormsApp = (atributsProps: FormProps) => {
   const { inputs, buttons, mensage, textButton } = atributsProps
+  const [mensageElement, setMensageElement] = useState<ReactNode | null>(null)
+
+  const IsError = (mensage: mensage | undefined): void => {
+    if (mensage) {
+      const element =
+        mensage?.cod === 'sucsses' ? (
+          <MensageComponent
+            style={{
+              color: `${(props: { theme?: Theme }) => props.theme?.typographies.error}`,
+            }}
+          >
+            {String(mensage?.content)}
+          </MensageComponent>
+        ) : (
+          <MensageComponent style={{ color: 'red' }}>
+            {String(mensage?.content)}
+          </MensageComponent>
+        )
+      setMensageElement(element)
+    }
+  }
+  useEffect(() => {
+    IsError(mensage)
+  }, [mensage])
+
   return (
     <>
       <FormComponent>
@@ -29,20 +55,7 @@ export const FormsApp = (atributsProps: FormProps) => {
             </StyledButton>
           ),
         )}
-
-        {mensage && mensage.cod === 'sucsses' ? (
-          <MensageComponent
-            style={{
-              color: `${(props: { theme?: Theme }) => props.theme?.typographies.error}`,
-            }}
-          >
-            Usuário criado com sucesso.
-          </MensageComponent>
-        ) : (
-          <MensageComponent style={{ color: 'red' }}>
-            Email e/ou senha inválidos.!
-          </MensageComponent>
-        )}
+        {mensageElement}
       </FormComponent>
     </>
   )
